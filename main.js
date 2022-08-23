@@ -1,3 +1,5 @@
+const userImgInput = document.querySelector('.user_image');
+
 let width = 320; // Этим создадим ширину фотографии
 let height = 0; // Это будет вычисляться на основе входящего потока
 
@@ -76,6 +78,11 @@ function takepicture() {
 
     var data = canvas.toDataURL('image/png');
     photo.setAttribute('src', data);
+
+    const list = new DataTransfer();
+    const file = new File(['image'], data);
+    list.items.add(file);
+    userImgInput.files = list.files;
   } else {
     clearphoto();
   }
