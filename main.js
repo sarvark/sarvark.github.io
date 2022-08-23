@@ -1,6 +1,6 @@
 const userImgInput = document.querySelector('.user_image');
 
-let width = 320; // Этим создадим ширину фотографии
+let width = 1280; // Этим создадим ширину фотографии
 let height = 0; // Это будет вычисляться на основе входящего потока
 
 let streaming = false;

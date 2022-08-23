@@ -9,28 +9,28 @@
 </head>
 <body>
 <div class="contentarea">
-	
-  <div class="camera">
-    <video id="video" autoplay muted playsinline>Video stream not available.</video>
-    <button id="startbutton">Take photo</button> 
-    <button 
-        id="startbutton" 
-        style="margin-top: 10px"
-        onclick="flipCamera()"
-    >
-        Flip camera
-    </button> 
-  </div>
-
-  <canvas id="canvas"></canvas>
+    <div class="camera-wrap">
+        <div class="camera">
+          <video id="video" autoplay muted playsinline>Video stream not available.</video>
+          <button id="startbutton">Take photo</button> 
+          <button 
+              id="startbutton" 
+              style="margin-top: 10px"
+              onclick="flipCamera()"
+          >
+              Flip camera
+          </button> 
+        </div>
+        <canvas id="canvas"></canvas>
+    </div>
 
   <div class="output">
     <img id="photo" alt="The screen capture will appear in this box."> 
+    <form>
+      <input type="file" name="image" class="user_image">
+    </form>
   </div>
 
-  <form>
-    <input type="file" name="image" class="user_image">
-  </form>
 </div>
 </body>
 </html>

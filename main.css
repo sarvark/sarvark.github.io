@@ -1,15 +1,21 @@
+.contentarea {
+    display: flex;
+    justify-self: center;
+    align-items: flex-start;
+}
+.camera {
+    width: 50%;
+}
 #video {
     border: 1px solid black;
     box-shadow: 2px 2px 3px black;
-    width: 320px;
-    height: 240px;
+    width: 1280px;
 }
 
 #photo {
     border: 1px solid black;
     box-shadow: 2px 2px 3px black;
-    width: 320px;
-    height: 240px;
+    width: 1280px;
 }
 
 #canvas {
@@ -17,13 +23,12 @@
 }
 
 .camera {
-    width: 340px;
     display: inline-block;
 }
 
 .output {
-    width: 340px;
     display: inline-block;
+    width: 50%;
 }
 
 #startbutton {
@@ -39,5 +44,4 @@
 .contentarea {
     font-size: 16px;
     font-family: "Lucida Grande", "Arial", sans-serif;
-    width: 760px;
 }
