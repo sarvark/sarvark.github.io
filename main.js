@@ -79,10 +79,12 @@ function takepicture() {
     var data = canvas.toDataURL('image/png');
     photo.setAttribute('src', data);
 
-    const list = new DataTransfer();
-    const file = new File(['image'], data);
-    list.items.add(file);
-    userImgInput.files = list.files;
+    canvas.toBlob((blob) => {
+      const list = new DataTransfer();
+      const file = new File([blob], 'image.png');
+      list.items.add(file);
+      userImgInput.files = list.files;
+    });
   } else {
     clearphoto();
   }
